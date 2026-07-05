@@ -1,8 +1,8 @@
-# blog-generator
+# blog_generator
 
-A tiny static blog generator in a single Python file. No dependencies.
+A static blog generator in a single Python file.
 
-It scans `src/` for post fragments, renders each one through `template.html`
+It scans `src/` for posts, creates an html file per post and pushes it
 into `posts/`, and injects a date-sorted list of posts into `blog.html`
 between two marker comments. Everything outside the markers is left alone,
 so `blog.html` stays a normal hand-edited page.
@@ -27,11 +27,10 @@ date: 2026-07-05
 <p>Content starts after the first blank line.</p>
 ```
 
-Then run the build. That's it — posts are discovered automatically.
+Then run the build.
 
 - Posts are sorted newest-first by `date` (use ISO format: `yyyy-mm-dd`).
 - Add `draft: true` to the metadata to exclude a post from the build.
-- The content zone is copied verbatim into the template, so it can be any HTML.
 
 ## Files
 
